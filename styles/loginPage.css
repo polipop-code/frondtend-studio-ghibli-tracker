@@ -1,0 +1,5 @@
+.loginPage_container, .loginPage_form {
+    width: 100%;
+    height: 80%;
+    background-color: aqua;
+}
