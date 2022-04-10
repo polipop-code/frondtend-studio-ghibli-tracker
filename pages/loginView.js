@@ -1,9 +1,10 @@
 import React from "react";
 import Link from "next/link";
+import Header from "../Components/Header";
 
 import styles from "../styles/Login.module.css";
 
-export default function login_page() {
+export default function loginView() {
     return (
         <div className={styles.container}>
             <Link href="/">
