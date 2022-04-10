@@ -114,18 +114,3 @@
         flex-direction: column;
     }
 }
-
-.loginPage_container,
-.loginPage_form {
-    width: 100%;
-    height: 80%;
-    background-color: aqua;
-    display: flex;
-    flex-direction: column;
-}
-
-.loginPage_form input {
-  width: 100%;
-  height: 24px;
-  background: #eaeaea;
-}

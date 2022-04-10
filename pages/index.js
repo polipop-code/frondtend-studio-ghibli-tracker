@@ -66,7 +66,7 @@ export default function Home() {
                 </div>
             </main>
 
-            <Link href="./loginPage/">
+            <Link href="./loginView/">
                 <a>Go to the login page</a>
             </Link>
 
