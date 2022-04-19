@@ -66,10 +66,6 @@ export default function Home() {
                 </div>
             </main>
 
-            <Link href="./loginView/">
-                <a>Go to the login page</a>
-            </Link>
-
             <footer className={styles.footer}>
                 <a
                     href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"

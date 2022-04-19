@@ -1,13 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap");
+
 .container {
     width: 100%;
+    min-height: 100vh;
     margin: 0px auto;
-    padding: 20px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
+    font-family: "Nunito", sans-serif;
+    color: #fffffc;
+    background-color: #827397;
+}
+
+.container h1 {
+    margin: 0px auto 24px;
+    font-size: 32px;
+    text-align: center;
 }
 
 .logIn,
 .signIn {
     display: flex;
     flex-direction: column;
+}
+
+.logIn label {
+    margin-top: 12px;
+    font-size: 20px;
+}
+
+.logIn input {
+    width: 100%;
+    height: 36px;
+    margin: 4px 0;
+    padding: 0 0 0 12px;
+    border: none;
+    border-radius: 24px;
+    outline: none;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    color: #273b47;
+}
+
+.logIn_button,
+.signIn_button {
+    width: 32%;
+    height: 36px;
+    margin: 2vh auto;
+    border: none;
+    border-radius: 24px;
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    color: #273b47;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.signIn label {
+    font-size: 20px;
+    text-align: center;
+}
+
+.twitter_connect,
+.facebook_connect {
+    width: 100%;
+    height: 32px;
+    margin: 2vh 0;
+    border: none;
+    border-radius: 24px;
+    font-family: "Nunito", sans-serif;
+    font-size: 14px;
+    color: #273b47;
+    background-color: #fff;
+}
+
+@media (min-width: 720px) {
+    .container {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+
+@media (min-width: 1080px) {
+    .container {
+        padding-left: 30%;
+        padding-right: 30%;
+    }
 }
