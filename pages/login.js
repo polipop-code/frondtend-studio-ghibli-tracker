@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import LoginForm from "../Components/LoginForm/LoginForm.js";
+import LoginForm from "../Components/LoginForm/index.js";
 
 import styles from "../styles/Login.module.css";
 
