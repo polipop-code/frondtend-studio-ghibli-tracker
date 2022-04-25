@@ -1,0 +1,21 @@
+.filter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter select::before,
+.filter select::after {
+    box-sizing: border-box;
+}
+
+.filter select {
+    width: 80%;
+    height: 24px;
+    margin: 12px auto;
+    padding: 0 12px;
+    border: none;
+    background-color: #efefef;
+    outline: none;
+    cursor: pointer;
+}
