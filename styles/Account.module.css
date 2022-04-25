@@ -1,0 +1,133 @@
+.main {
+  min-height: calc(100vh - 6rem);
+  padding: 4rem;
+  display: grid;
+  justify-items: center;
+  gap: 4rem;
+}
+
+.profile {
+  width: 24rem;
+  min-height: 24rem;
+  margin-bottom: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+.panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.sronly {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  border: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.4rem;
+}
+
+.link {
+  font-size: 2.4rem;
+  font-weight: 500;
+  border-bottom: .1rem solid #000;
+}
+
+.link i {
+  margin-left: 1rem;
+  font-size: 1.8rem;
+  vertical-align: middle;
+}
+
+.info {
+  width: 100%;
+  max-width: 45rem;
+}
+
+.subtitle {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.bar {
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 1rem;
+  position: relative;
+  border: .8rem solid #949292;
+  border-radius: 3rem;
+  overflow: hidden;
+  background-color: #949292;
+}
+
+.meter {
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: none;
+}
+.meter::-moz-meter-bar {
+  background: none;
+}
+
+.gauge {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3rem;
+  background-color: #e3dddd;
+}
+
+.counter {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .main {
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .panel {
+    gap: 6rem;
+  }
+
+  .controls {
+    gap: 2rem;
+  }
+
+  .profile {
+    width: 28rem;
+    min-height: 28rem;
+  }
+}
