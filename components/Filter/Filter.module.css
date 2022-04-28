@@ -1,21 +1,41 @@
-.filter {
+.filters_container {
     width: 100%;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.filter select::before,
-.filter select::after {
-    box-sizing: border-box;
+.filters_container > div {
+    width: 100%;
+    height: auto;
 }
 
-.filter select {
-    width: 80%;
-    height: 24px;
-    margin: 12px auto;
-    padding: 0 12px;
-    border: none;
-    background-color: #efefef;
-    outline: none;
-    cursor: pointer;
+.filters_container div label {
+    font-size: 1.5rem;
+    background-color: #fff;
+}
+
+.filters_container div input {
+    font-size: 1.5rem;
+}
+
+.filters_container div svg {
+    font-size: 2.5rem;
+}
+
+.filters_container > label {
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+@media (min-width: 720px) {
+    .filters_container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .filters_container > div {
+        width: 300px;
+    }
 }

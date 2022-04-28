@@ -2,6 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import Header from "../components/Header/index.jsx";
+import Filter from "../components/Filter/index.js";
 
 export default function Home() {
     return (
@@ -14,6 +16,8 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+            <Header />
+            <Filter />
 
             <main className={styles.main}>
                 <h1 className={styles.title}>
