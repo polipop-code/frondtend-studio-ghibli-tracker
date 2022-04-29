@@ -3,8 +3,6 @@ import TextField from "@mui/material/TextField";
 import Autocomplete, { createFilterOptions } from "@mui/material/Autocomplete";
 
 import styles from "./Filter.module.css";
-import { color } from "@mui/system";
-import { auto } from "@popperjs/core";
 
 const filterOptions = createFilterOptions({
     matchFrom: "start",
@@ -45,7 +43,6 @@ export default function Filter() {
     );
 }
 
-// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const SortBy = [{ title: "Gender" }, { title: "Duration" }];
 
 const Order = [{ title: "Alphabetical" }, { title: "Year" }];
