@@ -2,6 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import StarRating from './star-rating'
+import Header from '../components/Header'
+
+
 
 export default function Home() {
   return (
@@ -14,16 +17,13 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Crimson+Pro:wght@200;400&family=Nunito&family=Nunito+Sans&family=Quicksand:wght@500;700&family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet"/>
       </Head>
-      <Header></Header>
+      <Header showFilterBtn showSearchBtn showUserLink/> 
       <Main></Main>
       <Main></Main>
     </section>
   )
 }
 
-function Header(){
-  return <header className={styles.header}></header>
-}
 
 const Main = () => {
   return <section className={styles.main_container}>
@@ -61,4 +61,4 @@ const Year = () => <h4>2002</h4>
 const Description = () => {
   return <p className={styles.description}>
     Haru is a doubtful 17-year-old high school student who can't find her place among the others. Her life is turned upside down when, on her way home from high school with her best friend Hiromi, she saves the life of a cat that is nearly hit by a truck.
-  </p>
+  </p>}
