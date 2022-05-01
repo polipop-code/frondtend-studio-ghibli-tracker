@@ -8,7 +8,7 @@ const BackButton = () => {
 
   return (
     <button
-      className={`${styles.btn} ${styles.btnBack}`}
+      className={styles.btn}
       aria-label="Go back"
       onClick={() => router.back()}
     >

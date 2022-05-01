@@ -1,3 +1,23 @@
+:root {
+  --clr-primary: #6B4EFF;
+  --clr-primary-lt: #9990FF;
+  --clr-primary-ltr: #E7E7FF;
+  --clr-secondary: #FF5247;
+  --clr-secondary-lt: #FF6D6D;
+  --clr-base: #404446;
+  --clr-base-dk: #303437;
+  --clr-base-lt: #6C7072;
+  --clr-helper: #F2F4F5;
+  --clr-helper-dk: #E3E5E5;
+  --clr-helper-lt: #F7F9FA;
+  --clr-neutral: #FFFFFF;
+  --fs-sm: 1.4rem;
+  --fs-md: 1.6rem;
+  --fs-lg: 1.8rem;
+  --fs-xl: 2.4rem;
+  --fs-xxl: 3.2rem;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -14,6 +34,7 @@ body {
   font-family: 'Nunito', sans-serif;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  color: var(--clr-base);
 }
 
 ul,
@@ -54,4 +75,24 @@ a {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--clr-base-dk);
+}
+
+h1 {
+  font-size: var(--fs-xxl);
+}
+
+h2 {
+  font-size: var(--fs-xl);
+}
+
+h3 {
+  font-size: var(--fs-lg);
 }

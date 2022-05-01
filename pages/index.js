@@ -61,4 +61,5 @@ const Year = () => <h4>2002</h4>
 const Description = () => {
   return <p className={styles.description}>
     Haru is a doubtful 17-year-old high school student who can't find her place among the others. Her life is turned upside down when, on her way home from high school with her best friend Hiromi, she saves the life of a cat that is nearly hit by a truck.
-  </p>}
+  </p>
+}

@@ -21,7 +21,6 @@
 }
 
 .title {
-  font-size: 3.2rem;
   text-align: center;
 }
 
@@ -54,14 +53,19 @@
 }
 
 .link {
-  font-size: 2.4rem;
+  font-size: var(--fs-xl);
   font-weight: 500;
-  border-bottom: .1rem solid #000;
+  border-bottom: .1rem solid var(--clr-base);
+}
+
+.link:focus-visible {
+  outline: 0.2rem solid var(--clr-primary);
+  outline-offset: 0.3rem;
 }
 
 .link i {
   margin-left: 1rem;
-  font-size: 1.8rem;
+  font-size: var(--fs-lg);
   vertical-align: middle;
 }
 
@@ -72,7 +76,7 @@
 
 .subtitle {
   margin-bottom: 1rem;
-  font-size: 1.6rem;
+  font-size: var(--fs-md);
   font-weight: 500;
 }
 
@@ -81,10 +85,10 @@
   height: 4rem;
   margin-bottom: 1rem;
   position: relative;
-  border: .8rem solid #949292;
+  border: .8rem solid var(--clr-helper-dk);
   border-radius: 3rem;
   overflow: hidden;
-  background-color: #949292;
+  background-color: var(--clr-helper-dk);
 }
 
 .meter {
@@ -104,7 +108,7 @@
   top: 0;
   left: 0;
   border-radius: 3rem;
-  background-color: #e3dddd;
+  background-color: var(--clr-primary-lt);
 }
 
 .counter {
