@@ -1,89 +1,88 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap");
-
-.container {
-    width: 100%;
-    min-height: 100vh;
-    margin: 0px auto;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    font-family: "Nunito", sans-serif;
-    color: #fffffc;
-    background-color: #827397;
+.Login_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.container h1 {
-    margin: 0px auto 24px;
-    font-size: 32px;
-    text-align: center;
+.Login_container h1 {
+  /* margin-bottom: 40px; */
+  padding: 40px;
+  text-align: center;
+  color: #273b47;
 }
 
-.logIn,
-.signIn {
-    display: flex;
-    flex-direction: column;
+.Login_form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.logIn label {
-    margin-top: 12px;
-    font-size: 20px;
+.Login_form input {
+  width: 280px;
+  height: 60px;
+  margin: 10px auto 0;
+  padding-left: 16px;
+  border: 1px solid var(--clr-primary);
+  border-radius: 24px;
+  outline: none;
+  font-size: var(--fs-lg);
 }
 
-.logIn input {
-    width: 100%;
-    height: 36px;
-    margin: 4px 0;
-    padding: 0 0 0 12px;
-    border: none;
-    border-radius: 24px;
-    outline: none;
-    font-family: "Nunito", sans-serif;
-    font-size: 16px;
-    color: #273b47;
+.Login_form button,
+.Login_signin button {
+  width: 120px;
+  height: 50px;
+  margin: 10px auto 0;
+  border: none;
+  border-radius: 24px;
+  color: #fffffc;
+  background-color: var(--clr-primary);
 }
 
-.logIn_button,
-.signIn_button {
-    width: 32%;
-    height: 36px;
-    margin: 2vh auto;
-    border: none;
-    border-radius: 24px;
-    font-size: 16px;
-    font-family: "Nunito", sans-serif;
-    color: #273b47;
-    background-color: #fff;
-    cursor: pointer;
+.Login_form a {
+  margin: 20px auto;
+  font-size: var(--fs-md);
+  color: blue;
 }
 
-.signIn label {
-    font-size: 20px;
-    text-align: center;
+.Login_signin {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.twitter_connect,
-.facebook_connect {
-    width: 100%;
-    height: 32px;
-    margin: 2vh 0;
-    border: none;
-    border-radius: 24px;
-    font-family: "Nunito", sans-serif;
-    font-size: 14px;
-    color: #273b47;
-    background-color: #fff;
+.Login_signin p {
+
 }
 
-@media (min-width: 720px) {
-    .container {
-        padding-left: 20%;
-        padding-right: 20%;
-    }
+.Login_signin button {
+    margin-top: 20px;
+  margin-bottom: 40px;
 }
 
-@media (min-width: 1080px) {
-    .container {
-        padding-left: 30%;
-        padding-right: 30%;
-    }
+.Login_socialMedia {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Login_socialMedia button {
+  width: 280px;
+  height: 40px;
+
+  border-radius: 12px;
+  color: #fffffc;
+}
+
+.Login_socialMedia_Facebook {
+  background-color: #3b5998;
+  margin-bottom: 8px;
+}
+
+.Login_socialMedia_Twitter {
+  background-color: #00acee;
 }

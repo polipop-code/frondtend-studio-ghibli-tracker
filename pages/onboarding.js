@@ -9,7 +9,7 @@ export default function OnboardingView() {
       <Link href="/login">
         <button>Login</button>
       </Link>
-      <Link href="#">
+      <Link href="/signin">
         <button>Sign in</button>
       </Link>
     </div>
