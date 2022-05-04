@@ -54,12 +54,8 @@
   flex-direction: column;
 }
 
-.Login_signin p {
-
-}
-
 .Login_signin button {
-    margin-top: 20px;
+  margin-top: 20px;
   margin-bottom: 40px;
 }
 
@@ -85,4 +81,10 @@
 
 .Login_socialMedia_Twitter {
   background-color: #00acee;
+}
+
+@media (min-width: 768px) {
+  .Login_container h1 {
+    padding: 80px 40px;
+  }
 }
