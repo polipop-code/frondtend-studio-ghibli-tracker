@@ -7,7 +7,6 @@ export default function OnboardingView() {
     <div className={styles.Onboarding_wrapper}>
       <div className={styles.Onboarding_container}>
         <h1>Studio Ghibli Tracker</h1>
-
         <form className={styles.signin_form} action="/login" method="post">
           <input
             type="email"

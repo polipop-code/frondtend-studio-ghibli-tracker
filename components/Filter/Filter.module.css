@@ -1,41 +1,23 @@
-.filters_container {
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
+.Filter_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.filters_container > div {
-    width: 100%;
-    height: auto;
+.Filter_component input,
+.Filter_component label {
+  font-family: "Nunito", sans-serif;
+  /* color: #273b47; */
 }
 
-.filters_container div label {
-    font-size: 1.5rem;
-    background-color: #fff;
+.Filter_component input,
+.Filter_component label,
+.Filter_component svg {
+  font-size: var(--fs-md);
 }
 
-.filters_container div input {
-    font-size: 1.5rem;
-}
-
-.filters_container div svg {
-    font-size: 2.5rem;
-}
-
-.filters_container > label {
-    margin-top: 20px;
-    margin-bottom: 12px;
-}
-
-@media (min-width: 720px) {
-    .filters_container {
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .filters_container > div {
-        width: 300px;
-    }
+.Filter_component label {
+  padding-left: 4px;
+  padding-right: 4px;
+  background-color: #ffffff;
 }
