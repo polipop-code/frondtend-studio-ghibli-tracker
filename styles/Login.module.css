@@ -27,7 +27,7 @@
 .Login_form input {
   width: 280px;
   height: 60px;
-  margin: 10px auto 0;
+  margin: 0 auto 10px;
   padding-left: 16px;
   border: 1px solid var(--clr-primary);
   border-radius: 24px;
@@ -36,9 +36,9 @@
 }
 
 .Login_form button {
-  width: 140px;
+  width: 280px;
   height: 60px;
-  margin: 10px auto 0;
+  margin: 0 auto 10px;
   border: none;
   border-radius: 24px;
   color: #fffffc;
@@ -46,7 +46,7 @@
 }
 
 .Login_form a {
-  margin: 10px auto 0;
+  margin: 0 auto;
   font-size: var(--fs-md);
   color: blue;
 }
@@ -81,9 +81,9 @@
 
 .Login_socialMedia_Facebook {
   background-color: #3b5998;
+  margin-bottom: 10px;
 }
 
 .Login_socialMedia_Twitter {
   background-color: #00acee;
-  margin-top: 10px;
 }

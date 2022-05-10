@@ -14,7 +14,6 @@ export default function LoginView() {
     <div className={styles.Login_wrapper}>
       <div className={styles.Login_container}>
         <h1>Studio Ghibli Tracker</h1>
-
         <form className={styles.Login_form} action="/" method="get">
           <input
             type="email"
