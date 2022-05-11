@@ -1,30 +1,30 @@
-.Login_wrapper {
+.Onboarding_wrapper {
   width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
 }
 
-.Login_container {
+.Onboarding_container {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.Login_container h1 {
+.Onboarding_container h1 {
   padding: 0 40px 40px;
   text-align: center;
   color: #273b47;
 }
 
-.Login_form {
+.signin_form {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.Login_form input {
+.signin_form input {
   width: 280px;
   height: 60px;
   margin: 0 auto 10px;
@@ -35,7 +35,7 @@
   font-size: var(--fs-lg);
 }
 
-.Login_form button {
+.signin_form button {
   width: 280px;
   height: 60px;
   margin: 0 auto 10px;
@@ -45,13 +45,7 @@
   background-color: var(--clr-primary);
 }
 
-.Login_form a {
-  margin: 0 auto;
-  font-size: var(--fs-md);
-  color: blue;
-}
-
-.Login_signin {
+.Onboarding_login {
   width: 280px;
   margin: 20px auto;
   display: flex;
@@ -59,31 +53,8 @@
   align-items: center;
 }
 
-.Login_signin a {
+.Onboarding_login a {
   text-decoration: underline;
   font-size: var(--fs-md);
   color: blue;
-}
-
-.Login_socialMedia {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.Login_socialMedia button {
-  width: 280px;
-  height: 60px;
-  border-radius: 24px;
-  color: #fffffc;
-}
-
-.Login_socialMedia_Facebook {
-  background-color: #3b5998;
-  margin-bottom: 10px;
-}
-
-.Login_socialMedia_Twitter {
-  background-color: #00acee;
 }

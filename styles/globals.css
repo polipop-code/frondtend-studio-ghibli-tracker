@@ -1,16 +1,16 @@
 :root {
-  --clr-primary: #6B4EFF;
-  --clr-primary-lt: #9990FF;
-  --clr-primary-ltr: #E7E7FF;
-  --clr-secondary: #FF5247;
-  --clr-secondary-lt: #FF6D6D;
+  --clr-primary: #6b4eff;
+  --clr-primary-lt: #9990ff;
+  --clr-primary-ltr: #e7e7ff;
+  --clr-secondary: #ff5247;
+  --clr-secondary-lt: #ff6d6d;
   --clr-base: #404446;
   --clr-base-dk: #303437;
-  --clr-base-lt: #6C7072;
-  --clr-helper: #F2F4F5;
-  --clr-helper-dk: #E3E5E5;
-  --clr-helper-lt: #F7F9FA;
-  --clr-neutral: #FFFFFF;
+  --clr-base-lt: #6c7072;
+  --clr-helper: #f2f4f5;
+  --clr-helper-dk: #e3e5e5;
+  --clr-helper-lt: #f7f9fa;
+  --clr-neutral: #ffffff;
   --fs-sm: 1.4rem;
   --fs-md: 1.6rem;
   --fs-lg: 1.8rem;
@@ -31,7 +31,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   color: var(--clr-base);
