@@ -1,0 +1,153 @@
+.main {
+  width: 100%;
+  max-width: 80rem;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.helper {
+  font-family: 'uicons-filled' !important;
+  position: absolute;
+  visibility: hidden;
+}
+
+.helper::before {
+  content: '\f1fa';
+}
+
+.top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: var(--fs-xl);
+}
+
+.title span {
+  font-size: var(--fs-lg);
+}
+
+.btn {
+  font-size: var(--fs-xl);
+  color: var(--clr-primary);
+}
+
+.btn:focus-visible {
+  outline: 0.2rem solid var(--clr-primary);
+  outline-offset: 0.3rem;
+}
+
+.btn i {
+  display: block;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.poster {
+  width: 24rem;
+  aspect-ratio: 2 / 3;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.scores {
+  width: 24rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.copy {
+  align-self: flex-start;
+  font-weight: 500;
+}
+
+.copyTwo {
+  margin-top: 1rem;
+}
+
+.desc {
+  max-width: 56rem;
+  font-size: var(--fs-md);
+}
+
+.link {
+  align-self: flex-end;
+  border-bottom: 0.1rem solid var(--clr-base-dk);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--clr-base-dk);
+}
+
+.link i {
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.filled {
+  font-family: 'uicons-filled' !important;
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding: 4rem 0;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: var(--fs-xxl);
+  }
+
+  .content {
+    width: 100%;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 5rem;
+  }
+
+  .poster {
+    width: 28rem;
+    flex-shrink: 0;
+  }
+
+  .info {
+    padding-top: 4rem;
+    align-items: flex-start;
+  }
+
+  .scores {
+    width: auto;
+    align-items: flex-start;
+  }
+
+  .copyTwo {
+    margin-top: 2rem;
+  }
+
+  .link {
+    margin-top: auto;
+  }
+}

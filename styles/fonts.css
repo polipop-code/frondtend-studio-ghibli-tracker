@@ -34,6 +34,14 @@
   src: url('../public/fonts/uicons.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'uicons-filled';
+  font-style: normal;
+  font-weight: normal;
+  font-display: block;
+  src: url('../public/fonts/uicons-filled.woff2') format('woff2');
+}
+
 i {
   font-family: 'uicons' !important;
   font-style: normal;
@@ -86,4 +94,10 @@ i {
 }
 .icon-eye-crossed::before {
   content: '\f23d';
+}
+.icon-star::before {
+  content: '\f3a6';
+}
+.icon-exclamation::before {
+  content: '\f239';
 }

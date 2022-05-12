@@ -1,0 +1,35 @@
+.track {
+  display: flex;
+  position: relative;
+}
+
+.btn {
+  padding: 0 0.5rem;
+  font-size: 2rem;
+  color: var(--clr-primary);
+}
+
+.btn:first-child {
+  padding-left: 0;
+}
+
+.btn:nth-child(5) {
+  padding-right: 0;
+}
+
+.btn i {
+  display: block;
+}
+
+.on i {
+  font-family: 'uicons-filled' !important;
+}
+
+.off i {
+  font-family: 'uicons' !important;
+}
+
+.cover {
+  position: absolute;
+  inset: 0;
+}
