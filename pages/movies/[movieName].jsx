@@ -36,6 +36,7 @@ export default function Movie({ data }) {
   const router = useRouter();
   const request = router.query.movieName;
   const movie = data.find(item => item.id === request);
+  const name = movie.title.replace(/\s/g, '_');
 
   return (
     <>
@@ -72,7 +73,11 @@ export default function Movie({ data }) {
               <StarRating />
             </div>
             <p className={styles.desc}>{movie.description}</p>
-            <a className={styles.link} href={`#`}>
+            <a
+              className={styles.link}
+              href={`https://ghibli.fandom.com/wiki/${name}`}
+              target="_blank"
+            >
               More info <i className="icon-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
