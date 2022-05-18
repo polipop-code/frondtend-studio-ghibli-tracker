@@ -130,11 +130,12 @@
 
   .poster {
     width: 28rem;
+    height: fit-content;
     flex-shrink: 0;
   }
 
   .info {
-    padding-top: 4rem;
+    padding-top: 2rem;
     align-items: flex-start;
   }
 
