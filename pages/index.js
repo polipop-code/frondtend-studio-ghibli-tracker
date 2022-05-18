@@ -3,8 +3,24 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import StarRating from "../components/StarRating";
 import Header from "../components/Header";
+import Link from "next/link";
 
-export default function Home() {
+export async function getStaticProps() {
+  try {
+    const res = await fetch("https://ghibliapi.herokuapp.com/films/");
+    const data = await res.json();
+
+    return {
+      props: {
+        data,
+      },
+    };
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export default function Home({ data }) {
   return (
     <div className={styles.Home_container}>
       <Head>
@@ -19,9 +35,23 @@ export default function Home() {
         />
       </Head>
       <Header showFilterBtn showSearchBtn showUserLink />
-      <Movie_card />
-      <Movie_card />
-      <Movie_card />
+
+      {data.map((movie) => (
+        <article className={styles.Movie_card_container}>
+          <section className={styles.Movie_card_img}>
+            <Link href={"./movies/" + movie.id}>
+              <img src={movie.image}></img>
+            </Link>
+          </section>
+
+          <section className={styles.Movie_card_description}>
+            <h3>{movie.title}</h3>
+            <h4>{movie.release_date}</h4>
+            <p>{movie.description}</p>
+            <StarRating />
+          </section>
+        </article>
+      ))}
     </div>
   );
 }
@@ -42,6 +72,7 @@ const Movie_card = () => {
   );
 };
 
+/* En memoria de nuestros primero pasos en react, Estefania Lesmes y Ramón Gonazáles
 const Images = () => {
   return (
     <img src="https://w0.peakpx.com/wallpaper/866/66/HD-wallpaper-ghibli-anime-totoro.jpg"></img>
@@ -63,3 +94,4 @@ const Description = () => {
     </p>
   );
 };
+*/
