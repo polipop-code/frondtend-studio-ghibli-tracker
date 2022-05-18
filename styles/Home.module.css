@@ -23,6 +23,13 @@
 
 .Movie_card_img img {
   border-radius: 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.Movie_card_img img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
 }
 
 .Movie_card_description {
