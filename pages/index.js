@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css";
 import StarRating from "../components/StarRating";
 import Header from "../components/Header";
 import Link from "next/link";
+import React, { useState, useEffect } from "react";
 
 export async function getStaticProps() {
   try {
@@ -21,6 +22,9 @@ export async function getStaticProps() {
 }
 
 export default function Home({ data }) {
+  useEffect(() => {
+    localStorage.setItem("usersDB", "[]")
+  })
   return (
     <div className={styles.Home_container}>
       <Head>

@@ -9,10 +9,10 @@ export default function OnboardingView() {
         <h1>Studio Ghibli Tracker</h1>
         <form className={styles.signin_form} action="/login" method="post">
           <input
-            type="email"
-            placeholder="Enter a valid email"
-            id="user_email"
-            name="user_email"
+            type="text"
+            placeholder="Enter an user name"
+            id="user_name"
+            name="user_name"
             required
             minLength="4"
           ></input>
@@ -26,7 +26,7 @@ export default function OnboardingView() {
             minLength="8"
           ></input>
 
-          <button type="submit">Register</button>
+          <button type="button">Register</button>
         </form>
 
         <section className={styles.Onboarding_login}>
