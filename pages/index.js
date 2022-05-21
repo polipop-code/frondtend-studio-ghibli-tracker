@@ -23,8 +23,13 @@ export async function getStaticProps() {
 
 export default function Home({ data }) {
   useEffect(() => {
-    localStorage.setItem("usersDB", "[]")
-  })
+    localStorage.setItem("usersDB", "[]");
+    localStorage.setItem("movieNames", "[]");
+    let movieNamesToArray = [];
+    data.map((movies) => movieNamesToArray.push(movies.title));
+    localStorage.setItem("movieNames", JSON.stringify(movieNamesToArray));
+  });
+
   return (
     <div className={styles.Home_container}>
       <Head>
@@ -60,6 +65,7 @@ export default function Home({ data }) {
   );
 }
 
+/* En memoria de nuestros primero pasos en react, Estefania Lesmes y Ramón Gonazáles
 const Movie_card = () => {
   return (
     <article className={styles.Movie_card_container}>
@@ -76,7 +82,6 @@ const Movie_card = () => {
   );
 };
 
-/* En memoria de nuestros primero pasos en react, Estefania Lesmes y Ramón Gonazáles
 const Images = () => {
   return (
     <img src="https://w0.peakpx.com/wallpaper/866/66/HD-wallpaper-ghibli-anime-totoro.jpg"></img>

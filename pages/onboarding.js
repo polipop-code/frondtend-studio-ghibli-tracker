@@ -7,7 +7,7 @@ export default function OnboardingView() {
     <div className={styles.Onboarding_wrapper}>
       <div className={styles.Onboarding_container}>
         <h1>Studio Ghibli Tracker</h1>
-        <form className={styles.signin_form} action="/login" method="post">
+        <form className={styles.signin_form} action="/login">
           <input
             type="text"
             placeholder="Enter an user name"
@@ -26,7 +26,16 @@ export default function OnboardingView() {
             minLength="8"
           ></input>
 
-          <button type="button">Register</button>
+          <button
+            type="submit"
+            onClick={function (event) {
+              var setUserNameVal = document.getElementById("user_name").value;
+              var setUserPasswordVal = document.getElementById("user_password").value;
+              console.log(setUserNameVal, setUserPasswordVal);
+            }}
+          >
+            Register
+          </button>
         </form>
 
         <section className={styles.Onboarding_login}>
