@@ -1,25 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "../styles/Login.module.css";
 
+/*
 const userDB = [
   {
     email: "zhonen@mail.com",
     password: "12345678",
   },
 ];
+*/
 
 export default function LoginView() {
   return (
     <div className={styles.Login_wrapper}>
       <div className={styles.Login_container}>
         <h1>Studio Ghibli Tracker</h1>
-        <form className={styles.Login_form} action="/" method="get">
+        <form className={styles.Login_form} action="/">
           <input
-            type="email"
-            placeholder="Your email"
-            id="user_email"
-            name="user_email"
+            type="text"
+            placeholder="Your user name"
+            id="user_name"
+            name="user_name"
             required
             minLength="4"
           ></input>
@@ -36,10 +38,13 @@ export default function LoginView() {
           <button
             type="submit"
             onClick={function (event) {
-              var userVal = document.getElementById("user_email").value;
+              var userVal = document.getElementById("user_name").value;
               var userPasswordVal = document.getElementById("user_password").value;
-              if ((userVal == userDB[0].email) & (userPasswordVal == userDB[0].password)) {
+
+              let isYourUser = JSON.parse(localStorage.getItem("usersDB"));
+              if ((userVal == isYourUser.user) & (userPasswordVal == isYourUser.password)) {
                 alert("Usuario Valido");
+                // window.location.href="/"
               } else {
                 event.preventDefault();
                 alert("Algo salio mal");

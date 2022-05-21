@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "../styles/Onboarding.module.css";
 
@@ -27,11 +27,13 @@ export default function OnboardingView() {
           ></input>
 
           <button
-            type="submit"
-            onClick={function (event) {
+            type="button"
+            onClick={function () {
               var setUserNameVal = document.getElementById("user_name").value;
               var setUserPasswordVal = document.getElementById("user_password").value;
-              console.log(setUserNameVal, setUserPasswordVal);
+              let newUser = { user: setUserNameVal, password: setUserPasswordVal };
+
+              localStorage.setItem("usersDB", JSON.stringify(newUser));
             }}
           >
             Register
