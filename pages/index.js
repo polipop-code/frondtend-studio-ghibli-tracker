@@ -4,6 +4,8 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Link from "next/link";
 // import StarRating from "../components/StarRating";
+import Rating from "@mui/material/Rating";
+import Stack from "@mui/material/Stack";
 
 export async function getStaticProps() {
   try {
@@ -21,16 +23,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ data }) {
-  useEffect(() => {
-    localStorage.setItem("usersDB", "[]");
-    /*
-    localStorage.setItem("movieNames", "[]");
-    let movieNamesToArray = [];
-    data.map((movies) => movieNamesToArray.push(movies.title));
-    localStorage.setItem("movieNames", JSON.stringify(movieNamesToArray));
-    */
-  });
-
   return (
     <div className={styles.Home_container}>
       <Head>
@@ -58,7 +50,20 @@ export default function Home({ data }) {
             <h3>{movie.title}</h3>
             <h4>{movie.release_date}</h4>
             <p>{movie.description}</p>
-            {/* <StarRating /> */}
+
+            <div className={styles.movie_rating}>
+              <p>{movie.rt_score} / 100</p>
+              <Stack spacing={1}>
+                <Rating
+                  name="half-rating-read"
+                  defaultValue={movie.rt_score / 10}
+                  precision={0.5}
+                  readOnly
+                  max={10}
+                  sx={{ fontSize: 20 }}
+                />
+              </Stack>
+            </div>
           </section>
         </article>
       ))}
