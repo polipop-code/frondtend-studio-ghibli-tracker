@@ -2,14 +2,12 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "../styles/Login.module.css";
 
-/*
 const userDB = [
   {
-    email: "zhonen@mail.com",
+    userName: "zhonen",
     password: "12345678",
   },
 ];
-*/
 
 export default function LoginView() {
   return (
@@ -41,10 +39,8 @@ export default function LoginView() {
               var userVal = document.getElementById("user_name").value;
               var userPasswordVal = document.getElementById("user_password").value;
 
-              let isYourUser = JSON.parse(localStorage.getItem("usersDB"));
-              if ((userVal == isYourUser.user) & (userPasswordVal == isYourUser.password)) {
+              if ((userVal == userDB[0].userName) & (userPasswordVal == userDB[0].password)) {
                 alert("Usuario Valido");
-                // window.location.href="/"
               } else {
                 event.preventDefault();
                 alert("Algo salio mal");

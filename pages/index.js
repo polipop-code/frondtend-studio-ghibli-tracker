@@ -1,10 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
-import StarRating from "../components/StarRating";
+import Head from "next/head";
 import Header from "../components/Header";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+// import StarRating from "../components/StarRating";
 
 export async function getStaticProps() {
   try {
@@ -24,10 +23,12 @@ export async function getStaticProps() {
 export default function Home({ data }) {
   useEffect(() => {
     localStorage.setItem("usersDB", "[]");
+    /*
     localStorage.setItem("movieNames", "[]");
     let movieNamesToArray = [];
     data.map((movies) => movieNamesToArray.push(movies.title));
     localStorage.setItem("movieNames", JSON.stringify(movieNamesToArray));
+    */
   });
 
   return (
@@ -57,7 +58,7 @@ export default function Home({ data }) {
             <h3>{movie.title}</h3>
             <h4>{movie.release_date}</h4>
             <p>{movie.description}</p>
-            <StarRating />
+            {/* <StarRating /> */}
           </section>
         </article>
       ))}

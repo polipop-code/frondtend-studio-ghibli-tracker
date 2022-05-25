@@ -26,18 +26,7 @@ export default function OnboardingView() {
             minLength="8"
           ></input>
 
-          <button
-            type="button"
-            onClick={function () {
-              var setUserNameVal = document.getElementById("user_name").value;
-              var setUserPasswordVal = document.getElementById("user_password").value;
-              let newUser = { user: setUserNameVal, password: setUserPasswordVal };
-
-              localStorage.setItem("usersDB", JSON.stringify(newUser));
-            }}
-          >
-            Register
-          </button>
+          <button type="submit">Register</button>
         </form>
 
         <section className={styles.Onboarding_login}>
