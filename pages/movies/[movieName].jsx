@@ -1,11 +1,14 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import Header from "../../components/Header";
-import StarRating from "../../components/StarRating"
+import StarRating from "../../components/StarRating";
 import styles from "../../styles/Movie.module.css";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
+
+const LikeButton = dynamic(() => import("../../components/LikeButton"), { ssr: false });
 
 export async function getStaticProps() {
   const API = "https://ghibliapi.herokuapp.com/films";
@@ -29,11 +32,6 @@ export async function getStaticPaths() {
   }
 }
 
-const likeMovie = () => {
-  const icon = document.getElementById('like-icon');
-  icon.classList.toggle(styles.filled);
-}
-
 export default function Movie({ data }) {
   const router = useRouter();
   const request = router.query.movieName;
@@ -51,13 +49,7 @@ export default function Movie({ data }) {
         <i className={styles.helper}></i>
         <div className={styles.top}>
           <h1 className={styles.title}>{movie.title} <span>({movie.release_date})</span></h1>
-          <button
-            className={styles.btn}
-            aria-label="Like movie"
-            onClick={likeMovie}
-          >
-            <i className="icon-heart" id="like-icon" aria-hidden="true"></i>
-          </button>
+          <LikeButton id={movie.id} />
         </div>
         <div className={styles.content}>
           <figure className={styles.poster}>

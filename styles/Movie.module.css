@@ -33,20 +33,6 @@
   font-size: var(--fs-lg);
 }
 
-.btn {
-  font-size: var(--fs-xl);
-  color: var(--clr-primary);
-}
-
-.btn:focus-visible {
-  outline: 0.2rem solid var(--clr-primary);
-  outline-offset: 0.3rem;
-}
-
-.btn i {
-  display: block;
-}
-
 .content {
   display: flex;
   flex-direction: column;
@@ -105,10 +91,6 @@
 .link i {
   margin-left: 0.5rem;
   vertical-align: middle;
-}
-
-.filled {
-  font-family: 'uicons-filled' !important;
 }
 
 @media (min-width: 1024px) {
