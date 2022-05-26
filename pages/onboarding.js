@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "../styles/Onboarding.module.css";
 
@@ -7,12 +7,12 @@ export default function OnboardingView() {
     <div className={styles.Onboarding_wrapper}>
       <div className={styles.Onboarding_container}>
         <h1>Studio Ghibli Tracker</h1>
-        <form className={styles.signin_form} action="/login" method="post">
+        <form className={styles.signin_form} action="/login">
           <input
-            type="email"
-            placeholder="Enter a valid email"
-            id="user_email"
-            name="user_email"
+            type="text"
+            placeholder="Enter an user name"
+            id="user_name"
+            name="user_name"
             required
             minLength="4"
           ></input>

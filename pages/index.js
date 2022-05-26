@@ -1,9 +1,11 @@
-import Head from "next/head";
-import Image from "next/image";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
-import StarRating from "../components/StarRating";
+import Head from "next/head";
 import Header from "../components/Header";
 import Link from "next/link";
+// import StarRating from "../components/StarRating";
+import Rating from "@mui/material/Rating";
+import Stack from "@mui/material/Stack";
 
 export async function getStaticProps() {
   try {
@@ -48,7 +50,20 @@ export default function Home({ data }) {
             <h3>{movie.title}</h3>
             <h4>{movie.release_date}</h4>
             <p>{movie.description}</p>
-            <StarRating />
+
+            <div className={styles.movie_rating}>
+              <p>{movie.rt_score} / 100</p>
+              <Stack spacing={1}>
+                <Rating
+                  name="half-rating-read"
+                  defaultValue={movie.rt_score / 10}
+                  precision={0.5}
+                  readOnly
+                  max={10}
+                  sx={{ fontSize: 20 }}
+                />
+              </Stack>
+            </div>
           </section>
         </article>
       ))}
@@ -56,6 +71,7 @@ export default function Home({ data }) {
   );
 }
 
+/* En memoria de nuestros primero pasos en react, Estefania Lesmes y Ramón Gonazáles
 const Movie_card = () => {
   return (
     <article className={styles.Movie_card_container}>
@@ -72,7 +88,6 @@ const Movie_card = () => {
   );
 };
 
-/* En memoria de nuestros primero pasos en react, Estefania Lesmes y Ramón Gonazáles
 const Images = () => {
   return (
     <img src="https://w0.peakpx.com/wallpaper/866/66/HD-wallpaper-ghibli-anime-totoro.jpg"></img>
