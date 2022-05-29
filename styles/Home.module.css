@@ -48,18 +48,9 @@
   flex-direction: column;
 }
 
-.movie_rating p {
-  color: lightgrey;
-}
-
 @media (min-width: 768px) {
   .Movie_card_container {
     width: 80%;
-  }
-
-  .movie_rating {
-    flex-direction: row;
-    justify-content: space-around;
   }
 }
 

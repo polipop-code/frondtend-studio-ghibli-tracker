@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import styles from "../styles/Home.module.css";
+import React from "react";
 import Head from "next/head";
-import Header from "../components/Header";
 import Link from "next/link";
-// import StarRating from "../components/StarRating";
-import Rating from "@mui/material/Rating";
-import Stack from "@mui/material/Stack";
+import dynamic from "next/dynamic";
+import Header from "../components/Header";
+import styles from "../styles/Home.module.css";
+
+const StarRating = dynamic(() => import("../components/StarRating"), { ssr: false });
 
 export async function getStaticProps() {
   try {
@@ -49,17 +49,7 @@ export default function Home({ data }) {
             <p>{movie.description}</p>
 
             <div className={styles.movie_rating}>
-              <p>{movie.rt_score} / 100</p>
-              <Stack spacing={1}>
-                <Rating
-                  name="half-rating-read"
-                  defaultValue={movie.rt_score / 10}
-                  precision={0.5}
-                  readOnly
-                  max={10}
-                  sx={{ fontSize: 20 }}
-                />
-              </Stack>
+              <StarRating score={movie.rt_score} />
             </div>
           </section>
         </article>

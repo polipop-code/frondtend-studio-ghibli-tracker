@@ -3,12 +3,10 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Header from "../../components/Header";
-import StarRating from "../../components/StarRating";
 import styles from "../../styles/Movie.module.css";
-import Rating from "@mui/material/Rating";
-import Stack from "@mui/material/Stack";
 
 const LikeButton = dynamic(() => import("../../components/LikeButton"), { ssr: false });
+const StarRating = dynamic(() => import("../../components/StarRating"), { ssr: false });
 
 export async function getStaticProps() {
   const API = "https://ghibliapi.herokuapp.com/films";
@@ -61,19 +59,10 @@ export default function Movie({ data }) {
           </figure>
           <div className={styles.info}>
             <div className={styles.scores}>
-              <p className={styles.copy}>Audience score: {movie.rt_score} / 100</p>
-              <Stack spacing={1}>
-                <Rating
-                  name="half-rating-read"
-                  defaultValue={movie.rt_score / 10}
-                  precision={0.5}
-                  readOnly
-                  max={10}
-                  sx={{ fontSize: 20 }}
-                />
-              </Stack>
+              <p className={styles.copy}>Audience score</p>
+              <StarRating score={movie.rt_score} />
               <p className={`${styles.copy} ${styles.copyTwo}`}>Your score</p>
-              <StarRating />
+              <StarRating id={movie.id} />
             </div>
             <p className={styles.desc}>{movie.description}</p>
             <a
