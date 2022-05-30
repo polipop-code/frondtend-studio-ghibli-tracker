@@ -1,12 +1,23 @@
+<<<<<<< HEAD
+import '../styles/globals.css'
+
+
+=======
 import "../styles/globals.css";
 import "../styles/fonts.css";
 
 // import App from 'next/app'
+>>>>>>> develop
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
 
+<<<<<<< HEAD
+export default MyApp
+
+
+=======
 // Only uncomment this method if you have blocking data requirements for
 // every single page in your application. This disables the ability to
 // perform automatic static optimization, causing every page in your app to
@@ -20,3 +31,4 @@ function MyApp({ Component, pageProps }) {
 // }
 
 export default MyApp;
+>>>>>>> develop

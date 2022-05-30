@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "./Header.module.css";
+import {useState, useEffect} from 'react'
 
 const BackButton = () => {
   const router = useRouter();
@@ -30,7 +31,9 @@ const UserLink = () => {
   );
 }
 
+
 const SearchForm = () => {
+  
   return (
     <form className={styles.form} id="form" action="#">
       <input
@@ -38,11 +41,14 @@ const SearchForm = () => {
         type="search"
         name="search"
         id="search"
-        placeholder="Search movie ..."
+        placeholder="Search movie ..." 
+        onChange={(e)=>searchItems(e.target.value)}
+        
       />
+  
     </form>
-  );
-}
+  )  }
+
 
 const FilterButton = () => {
   return (
@@ -55,6 +61,8 @@ const FilterButton = () => {
   );
 }
 
+
+
 const SearchButton = () => {
   return (
     <button
@@ -64,6 +72,7 @@ const SearchButton = () => {
         const form = document.getElementById('form');
         form.classList.toggle(`${styles.isVisible}`);
       }}
+     
     >
       <i className="icon-search" aria-hidden="true"></i>
     </button>

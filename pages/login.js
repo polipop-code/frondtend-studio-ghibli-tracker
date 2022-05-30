@@ -2,12 +2,20 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "../styles/Login.module.css";
 
+<<<<<<< HEAD
+
+export default function loginView() {
+    return (
+        <div className={styles.container}>
+            <h1>Studio Ghibli Tracker</h1>
+=======
 const userDB = [
   {
     userName: "zhonen",
     password: "12345678",
   },
 ];
+>>>>>>> develop
 
 export default function LoginView() {
   return (
