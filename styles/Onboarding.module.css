@@ -1,0 +1,60 @@
+.Onboarding_wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.Onboarding_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Onboarding_container h1 {
+  padding: 0 40px 40px;
+  text-align: center;
+  color: #273b47;
+}
+
+.signin_form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.signin_form input {
+  width: 280px;
+  height: 60px;
+  margin: 0 auto 10px;
+  padding-left: 16px;
+  border: 1px solid var(--clr-primary);
+  border-radius: 24px;
+  outline: none;
+  font-size: var(--fs-lg);
+}
+
+.signin_form button {
+  width: 280px;
+  height: 60px;
+  margin: 0 auto 10px;
+  border: none;
+  border-radius: 24px;
+  color: #fffffc;
+  background-color: var(--clr-primary);
+}
+
+.Onboarding_login {
+  width: 280px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Onboarding_login a {
+  text-decoration: underline;
+  font-size: var(--fs-md);
+  color: blue;
+}

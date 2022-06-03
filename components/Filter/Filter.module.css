@@ -1,0 +1,22 @@
+.Filter_container {
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.Filter_component input,
+.Filter_component label {
+  font-family: "Nunito", sans-serif;
+  font-size: var(--fs-md);
+}
+
+.Filter_component svg {
+  font-size: var(--fs-xl);
+}
+
+.Filter_component label {
+  padding-left: 4px;
+  padding-right: 4px;
+  background-color: #ffffff;
+}
