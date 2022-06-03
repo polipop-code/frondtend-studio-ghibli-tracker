@@ -7,23 +7,7 @@
   justify-content: space-between;
   gap: 1rem;
   box-shadow: 0 1px 6px rgba(0, 0, 0, .25);
-  /*background: #fe9d90;*/
-  background: #fff;
-  border-radius: 20px 20px 0px 0px;
 }
- @media screen and (min-width: 992px){
-   .header{
-     width:100%;
-     margin-top: 10px;
-     height: 3rem;
-   }
- }
- @media screen and (min-width: 1170px){
-   .header{
-     width:201%;
-   }
- }
-
 
 .btnsWrapper {
   display: flex;
@@ -46,7 +30,6 @@
 
 .btn i {
   display: block;
-  color: #ffff;
 }
 
 .form {
@@ -86,7 +69,6 @@
 @media (min-width: 768px) {
   .header {
     padding: 0 4rem;
-    
   }
 
   .btnsWrapper {

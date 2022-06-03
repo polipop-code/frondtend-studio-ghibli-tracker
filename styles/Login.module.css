@@ -58,20 +58,11 @@
   justify-content: space-around;
   align-items: center;
 }
-<<<<<<< HEAD
- 
-@media (min-width: 720px) {
-    .container {
-        padding-left: 20%;
-        padding-right: 20%;
-    }
-=======
 
 .Login_signin a {
   text-decoration: underline;
   font-size: var(--fs-md);
   color: blue;
->>>>>>> develop
 }
 
 .Login_socialMedia {
