@@ -53,7 +53,7 @@ export default function LoginView() {
         </form>
 
         <section className={styles.Login_signin}>
-          <p>Don't have an account?</p>
+          <p>Don&apos;t have an account?</p>
           <Link href="/onboarding">
             <a type="button">Signin</a>
           </Link>

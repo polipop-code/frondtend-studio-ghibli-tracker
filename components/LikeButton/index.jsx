@@ -9,7 +9,7 @@ export default function LikeButton({ id }) {
 
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(liked));
-  }, [liked]);
+  });
 
   return (
     <button

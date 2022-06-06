@@ -69,6 +69,7 @@ export default function Movie({ data }) {
               className={styles.link}
               href={`https://ghibli.fandom.com/wiki/${name}`}
               target="_blank"
+              rel="noopener noreferrer"
             >
               More info <i className="icon-arrow-right" aria-hidden="true"></i>
             </a>

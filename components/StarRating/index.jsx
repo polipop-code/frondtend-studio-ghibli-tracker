@@ -6,6 +6,17 @@ import StarRoundedIcon from '@mui/icons-material/StarRounded';
 export default function StarRating({ score, id }) {
   const rating = (score / 20);
   const key = `rate-${id}`;
+
+  const [value, setValue] = useState(
+    typeof window !== 'undefined' && JSON.parse(localStorage.getItem(key)) || null
+  );
+
+  useEffect(() => {
+    if (id) {
+      localStorage.setItem(key, JSON.stringify(value));
+    }
+  });
+
   const styles = {
     "& .MuiRating-icon": {
       fontSize: "var(--fs-xxl)"
@@ -32,14 +43,6 @@ export default function StarRating({ score, id }) {
   }
 
   if (id) {
-    const [value, setValue] = useState(
-      typeof window !== 'undefined' && JSON.parse(localStorage.getItem(key)) || null
-    );
-
-    useEffect(() => {
-      localStorage.setItem(key, JSON.stringify(value));
-    }, [value]);
-
     return (
       <Rating
         value={value}
